@@ -1,0 +1,52 @@
+version: "1.0.0"
+name: "LangChain Component Library"
+
+nodeComponents:
+  core-package:
+    label: "Core Package"
+    description: "Base abstractions and primitives (langchain-core)"
+    color: "#4A90E2"
+    shape: "rectangle"
+
+  implementation-package:
+    label: "Implementation Package"
+    description: "Main langchain package with concrete implementations"
+    color: "#50C878"
+    shape: "rectangle"
+
+  partner-integration:
+    label: "Partner Integration"
+    description: "Third-party service integration (e.g., OpenAI, Anthropic)"
+    color: "#F39C12"
+    shape: "rectangle"
+
+  utility-package:
+    label: "Utility Package"
+    description: "Supporting utilities (text-splitters, CLI, etc.)"
+    color: "#9B59B6"
+    shape: "rectangle"
+
+  test-package:
+    label: "Test Package"
+    description: "Testing and validation packages"
+    color: "#E74C3C"
+    shape: "rectangle"
+
+edgeComponents:
+  dependency:
+    label: "Depends On"
+    description: "Package dependency relationship"
+    color: "#2C3E50"
+    style: "solid"
+
+  integration:
+    label: "Integrates With"
+    description: "Integration or extension relationship"
+    color: "#16A085"
+    style: "dashed"
+
+  tests:
+    label: "Tests"
+    description: "Testing relationship"
+    color: "#E74C3C"
+    style: "dotted"

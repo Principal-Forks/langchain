@@ -1,0 +1,288 @@
+{
+  "vv": {
+    "name": "LangChain Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "core-package": {
+        "label": "Core Package",
+        "description": "Base abstractions and primitives (langchain-core)",
+        "color": "#4A90E2",
+        "shape": "rectangle"
+      },
+      "implementation-package": {
+        "label": "Implementation Package",
+        "description": "Main langchain package with concrete implementations",
+        "color": "#50C878",
+        "shape": "rectangle"
+      },
+      "partner-integration": {
+        "label": "Partner Integration",
+        "description": "Third-party service integration",
+        "color": "#F39C12",
+        "shape": "rectangle"
+      },
+      "utility-package": {
+        "label": "Utility Package",
+        "description": "Supporting utilities",
+        "color": "#9B59B6",
+        "shape": "rectangle"
+      },
+      "test-package": {
+        "label": "Test Package",
+        "description": "Testing and validation packages",
+        "color": "#E74C3C",
+        "shape": "rectangle"
+      }
+    },
+    "edgeTypes": {
+      "dependency": {
+        "label": "Depends On",
+        "description": "Package dependency relationship",
+        "color": "#2C3E50",
+        "style": "solid"
+      },
+      "integration": {
+        "label": "Integrates With",
+        "description": "Integration or extension relationship",
+        "color": "#16A085",
+        "style": "dashed"
+      },
+      "tests": {
+        "label": "Tests",
+        "description": "Testing relationship",
+        "color": "#E74C3C",
+        "style": "dotted"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "langchain-core",
+      "type": "text",
+      "x": 223,
+      "y": 618,
+      "width": 200,
+      "height": 100,
+      "text": "langchain-core\nlibs/core",
+      "vv": {
+        "nodeType": "core-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "langchain",
+      "type": "text",
+      "x": -402,
+      "y": -290,
+      "width": 200,
+      "height": 100,
+      "text": "langchain\nlibs/langchain_v1",
+      "vv": {
+        "nodeType": "implementation-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "langchain-classic",
+      "type": "text",
+      "x": 10,
+      "y": -284,
+      "width": 200,
+      "height": 100,
+      "text": "langchain-classic (legacy)\nlibs/langchain",
+      "vv": {
+        "nodeType": "implementation-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "partner-openai",
+      "type": "text",
+      "x": -147,
+      "y": 389,
+      "width": 180,
+      "height": 80,
+      "text": "langchain-openai\nlibs/partners/openai",
+      "vv": {
+        "nodeType": "partner-integration",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "partner-anthropic",
+      "type": "text",
+      "x": -604,
+      "y": 388,
+      "width": 180,
+      "height": 80,
+      "text": "langchain-anthropic\nlibs/partners/anthropic",
+      "vv": {
+        "nodeType": "partner-integration",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "partner-ollama",
+      "type": "text",
+      "x": -372,
+      "y": 389,
+      "width": 180,
+      "height": 80,
+      "text": "langchain-ollama\nlibs/partners/ollama",
+      "vv": {
+        "nodeType": "partner-integration",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "text-splitters",
+      "type": "text",
+      "x": 277,
+      "y": -279,
+      "width": 180,
+      "height": 80,
+      "text": "text-splitters\nlibs/text-splitters",
+      "vv": {
+        "nodeType": "utility-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "cli",
+      "type": "text",
+      "x": 504,
+      "y": -280,
+      "width": 180,
+      "height": 80,
+      "text": "cli\nlibs/cli",
+      "vv": {
+        "nodeType": "utility-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "model-profiles",
+      "type": "text",
+      "x": 456,
+      "y": 398,
+      "width": 180,
+      "height": 80,
+      "text": "model-profiles\nlibs/model-profiles",
+      "vv": {
+        "nodeType": "utility-package",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "standard-tests",
+      "type": "text",
+      "x": -373,
+      "y": 188,
+      "width": 180,
+      "height": 80,
+      "text": "standard-tests\nlibs/standard-tests",
+      "vv": {
+        "nodeType": "test-package",
+        "shape": "rectangle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "langchain",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e2",
+      "fromNode": "langchain-classic",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e3",
+      "fromNode": "partner-openai",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e4",
+      "fromNode": "partner-anthropic",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e5",
+      "fromNode": "partner-ollama",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e6",
+      "fromNode": "text-splitters",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e7",
+      "fromNode": "cli",
+      "toNode": "langchain-core",
+      "vv": {
+        "edgeType": "dependency"
+      }
+    },
+    {
+      "id": "e8",
+      "fromNode": "standard-tests",
+      "toNode": "partner-openai",
+      "vv": {
+        "edgeType": "tests"
+      }
+    },
+    {
+      "id": "e9",
+      "fromNode": "standard-tests",
+      "toNode": "partner-anthropic",
+      "vv": {
+        "edgeType": "tests"
+      }
+    },
+    {
+      "id": "e10",
+      "fromNode": "standard-tests",
+      "toNode": "partner-ollama",
+      "vv": {
+        "edgeType": "tests"
+      }
+    },
+    {
+      "id": "e11",
+      "fromNode": "langchain",
+      "toNode": "partner-openai",
+      "vv": {
+        "edgeType": "integration"
+      }
+    },
+    {
+      "id": "e12",
+      "fromNode": "langchain",
+      "toNode": "partner-anthropic",
+      "vv": {
+        "edgeType": "integration"
+      }
+    }
+  ]
+}
