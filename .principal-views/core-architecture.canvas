@@ -1,59 +1,7 @@
 {
-  "vv": {
+  "pv": {
     "name": "LangChain Core Architecture",
-    "version": "1.0.0",
-    "nodeTypes": {
-      "abstraction": {
-        "label": "Abstraction Layer",
-        "description": "Core interfaces and base classes",
-        "color": "#4A90E2",
-        "shape": "rectangle"
-      },
-      "execution": {
-        "label": "Execution Layer",
-        "description": "Runtime and execution components",
-        "color": "#50C878",
-        "shape": "rectangle"
-      },
-      "data": {
-        "label": "Data Layer",
-        "description": "Data structures and models",
-        "color": "#F39C12",
-        "shape": "rectangle"
-      },
-      "utility": {
-        "label": "Utility",
-        "description": "Supporting utilities and helpers",
-        "color": "#9B59B6",
-        "shape": "rectangle"
-      },
-      "observability": {
-        "label": "Observability",
-        "description": "Callbacks, tracing, and monitoring",
-        "color": "#E74C3C",
-        "shape": "rectangle"
-      }
-    },
-    "edgeTypes": {
-      "uses": {
-        "label": "Uses",
-        "description": "Component dependency",
-        "color": "#2C3E50",
-        "style": "solid"
-      },
-      "extends": {
-        "label": "Extends",
-        "description": "Inheritance or extension",
-        "color": "#16A085",
-        "style": "dashed"
-      },
-      "produces": {
-        "label": "Produces",
-        "description": "Output or creation relationship",
-        "color": "#27AE60",
-        "style": "dotted"
-      }
-    }
+    "version": "1.0.0"
   },
   "nodes": [
     {
@@ -64,7 +12,7 @@
       "width": 200,
       "height": 80,
       "text": "Runnables\n(LCEL)",
-      "vv": {
+      "pv": {
         "nodeType": "execution",
         "shape": "rectangle"
       }
@@ -77,7 +25,7 @@
       "width": 180,
       "height": 80,
       "text": "Language Models\n(LLMs, Chat)",
-      "vv": {
+      "pv": {
         "nodeType": "abstraction",
         "shape": "rectangle"
       }
@@ -90,7 +38,7 @@
       "width": 160,
       "height": 80,
       "text": "Embeddings",
-      "vv": {
+      "pv": {
         "nodeType": "abstraction",
         "shape": "rectangle"
       }
@@ -103,7 +51,7 @@
       "width": 160,
       "height": 80,
       "text": "Vector Stores",
-      "vv": {
+      "pv": {
         "nodeType": "abstraction",
         "shape": "rectangle"
       }
@@ -116,7 +64,7 @@
       "width": 140,
       "height": 80,
       "text": "Tools",
-      "vv": {
+      "pv": {
         "nodeType": "abstraction",
         "shape": "rectangle"
       }
@@ -129,7 +77,7 @@
       "width": 140,
       "height": 80,
       "text": "Prompts",
-      "vv": {
+      "pv": {
         "nodeType": "data",
         "shape": "rectangle"
       }
@@ -142,7 +90,7 @@
       "width": 140,
       "height": 80,
       "text": "Messages",
-      "vv": {
+      "pv": {
         "nodeType": "data",
         "shape": "rectangle"
       }
@@ -155,7 +103,7 @@
       "width": 140,
       "height": 80,
       "text": "Documents",
-      "vv": {
+      "pv": {
         "nodeType": "data",
         "shape": "rectangle"
       }
@@ -168,7 +116,7 @@
       "width": 140,
       "height": 80,
       "text": "Outputs",
-      "vv": {
+      "pv": {
         "nodeType": "data",
         "shape": "rectangle"
       }
@@ -181,7 +129,7 @@
       "width": 160,
       "height": 80,
       "text": "Output Parsers",
-      "vv": {
+      "pv": {
         "nodeType": "utility",
         "shape": "rectangle"
       }
@@ -194,7 +142,7 @@
       "width": 140,
       "height": 80,
       "text": "Callbacks",
-      "vv": {
+      "pv": {
         "nodeType": "observability",
         "shape": "rectangle"
       }
@@ -207,7 +155,7 @@
       "width": 140,
       "height": 80,
       "text": "Tracers",
-      "vv": {
+      "pv": {
         "nodeType": "observability",
         "shape": "rectangle"
       }
@@ -220,7 +168,7 @@
       "width": 180,
       "height": 80,
       "text": "Document Loaders",
-      "vv": {
+      "pv": {
         "nodeType": "utility",
         "shape": "rectangle"
       }
@@ -233,7 +181,7 @@
       "width": 180,
       "height": 80,
       "text": "Example Selectors",
-      "vv": {
+      "pv": {
         "nodeType": "utility",
         "shape": "rectangle"
       }
@@ -246,7 +194,7 @@
       "width": 140,
       "height": 80,
       "text": "Indexing",
-      "vv": {
+      "pv": {
         "nodeType": "utility",
         "shape": "rectangle"
       }
@@ -257,7 +205,7 @@
       "id": "e1",
       "fromNode": "runnables",
       "toNode": "language-models",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -265,7 +213,7 @@
       "id": "e2",
       "fromNode": "runnables",
       "toNode": "embeddings",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -273,7 +221,7 @@
       "id": "e3",
       "fromNode": "runnables",
       "toNode": "vectorstores",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -281,7 +229,7 @@
       "id": "e4",
       "fromNode": "runnables",
       "toNode": "tools",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -289,7 +237,7 @@
       "id": "e5",
       "fromNode": "language-models",
       "toNode": "messages",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -297,7 +245,7 @@
       "id": "e6",
       "fromNode": "language-models",
       "toNode": "prompts",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -305,7 +253,7 @@
       "id": "e7",
       "fromNode": "language-models",
       "toNode": "outputs",
-      "vv": {
+      "pv": {
         "edgeType": "produces"
       }
     },
@@ -313,7 +261,7 @@
       "id": "e8",
       "fromNode": "vectorstores",
       "toNode": "embeddings",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -321,7 +269,7 @@
       "id": "e9",
       "fromNode": "vectorstores",
       "toNode": "documents",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -329,7 +277,7 @@
       "id": "e10",
       "fromNode": "document-loaders",
       "toNode": "documents",
-      "vv": {
+      "pv": {
         "edgeType": "produces"
       }
     },
@@ -337,7 +285,7 @@
       "id": "e11",
       "fromNode": "outputs",
       "toNode": "output-parsers",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -345,7 +293,7 @@
       "id": "e12",
       "fromNode": "runnables",
       "toNode": "callbacks",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -353,7 +301,7 @@
       "id": "e13",
       "fromNode": "callbacks",
       "toNode": "tracers",
-      "vv": {
+      "pv": {
         "edgeType": "extends"
       }
     },
@@ -361,7 +309,7 @@
       "id": "e14",
       "fromNode": "prompts",
       "toNode": "example-selectors",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -369,7 +317,7 @@
       "id": "e15",
       "fromNode": "indexing",
       "toNode": "documents",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -377,7 +325,7 @@
       "id": "e16",
       "fromNode": "indexing",
       "toNode": "vectorstores",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     }

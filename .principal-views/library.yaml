@@ -1,0 +1,100 @@
+version: "1.0.0"
+name: "LangChain Component Library"
+
+nodeComponents:
+  core-package:
+    defaultLabel: "Core Package"
+    description: "Base abstractions and primitives (langchain-core)"
+    color: "#4A90E2"
+    shape: "rectangle"
+
+  implementation-package:
+    defaultLabel: "Implementation Package"
+    description: "Main langchain package with concrete implementations"
+    color: "#50C878"
+    shape: "rectangle"
+
+  partner-integration:
+    defaultLabel: "Partner Integration"
+    description: "Third-party service integration (e.g., OpenAI, Anthropic)"
+    color: "#F39C12"
+    shape: "rectangle"
+
+  utility-package:
+    defaultLabel: "Utility Package"
+    description: "Supporting utilities (text-splitters, CLI, etc.)"
+    color: "#9B59B6"
+    shape: "rectangle"
+
+  test-package:
+    defaultLabel: "Test Package"
+    description: "Testing and validation packages"
+    color: "#E74C3C"
+    shape: "rectangle"
+
+  abstraction:
+    defaultLabel: "Abstraction Layer"
+    description: "Core interfaces and base classes"
+    color: "#4A90E2"
+    shape: "rectangle"
+
+  execution:
+    defaultLabel: "Execution Layer"
+    description: "Runtime and execution components"
+    color: "#50C878"
+    shape: "rectangle"
+
+  data:
+    defaultLabel: "Data Layer"
+    description: "Data structures and models"
+    color: "#F39C12"
+    shape: "rectangle"
+
+  utility:
+    defaultLabel: "Utility"
+    description: "Supporting utilities and helpers"
+    color: "#9B59B6"
+    shape: "rectangle"
+
+  observability:
+    defaultLabel: "Observability"
+    description: "Callbacks, tracing, and monitoring"
+    color: "#E74C3C"
+    shape: "rectangle"
+
+edgeComponents:
+  dependency:
+    label: "Depends On"
+    description: "Package dependency relationship"
+    color: "#2C3E50"
+    style: "solid"
+
+  integration:
+    label: "Integrates With"
+    description: "Integration or extension relationship"
+    color: "#16A085"
+    style: "dashed"
+
+  tests:
+    label: "Tests"
+    description: "Testing relationship"
+    color: "#E74C3C"
+    style: "dotted"
+
+  uses:
+    label: "Uses"
+    description: "Component dependency"
+    color: "#2C3E50"
+    style: "solid"
+
+  extends:
+    label: "Extends"
+    description: "Inheritance or extension"
+    color: "#16A085"
+    style: "dashed"
+
+  produces:
+    label: "Produces"
+    description: "Output or creation relationship"
+    color: "#27AE60"
+    style: "dotted"
