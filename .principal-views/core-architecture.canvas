@@ -205,6 +205,8 @@
       "id": "e1",
       "fromNode": "runnables",
       "toNode": "language-models",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -213,6 +215,8 @@
       "id": "e2",
       "fromNode": "runnables",
       "toNode": "embeddings",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -221,6 +225,8 @@
       "id": "e3",
       "fromNode": "runnables",
       "toNode": "vectorstores",
+      "fromSide": "right",
+      "toSide": "left",
       "pv": {
         "edgeType": "uses"
       }
@@ -229,6 +235,8 @@
       "id": "e4",
       "fromNode": "runnables",
       "toNode": "tools",
+      "fromSide": "left",
+      "toSide": "right",
       "pv": {
         "edgeType": "uses"
       }
@@ -237,6 +245,8 @@
       "id": "e5",
       "fromNode": "language-models",
       "toNode": "messages",
+      "fromSide": "right",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -245,6 +255,8 @@
       "id": "e6",
       "fromNode": "language-models",
       "toNode": "prompts",
+      "fromSide": "left",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -253,6 +265,8 @@
       "id": "e7",
       "fromNode": "language-models",
       "toNode": "outputs",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "produces"
       }
@@ -261,6 +275,8 @@
       "id": "e8",
       "fromNode": "vectorstores",
       "toNode": "embeddings",
+      "fromSide": "top",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "uses"
       }
@@ -269,6 +285,8 @@
       "id": "e9",
       "fromNode": "vectorstores",
       "toNode": "documents",
+      "fromSide": "right",
+      "toSide": "left",
       "pv": {
         "edgeType": "uses"
       }
@@ -277,6 +295,8 @@
       "id": "e10",
       "fromNode": "document-loaders",
       "toNode": "documents",
+      "fromSide": "left",
+      "toSide": "right",
       "pv": {
         "edgeType": "produces"
       }
@@ -285,6 +305,8 @@
       "id": "e11",
       "fromNode": "outputs",
       "toNode": "output-parsers",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -293,6 +315,8 @@
       "id": "e12",
       "fromNode": "runnables",
       "toNode": "callbacks",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -301,6 +325,8 @@
       "id": "e13",
       "fromNode": "callbacks",
       "toNode": "tracers",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "extends"
       }
@@ -309,6 +335,8 @@
       "id": "e14",
       "fromNode": "prompts",
       "toNode": "example-selectors",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -317,6 +345,8 @@
       "id": "e15",
       "fromNode": "indexing",
       "toNode": "documents",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -325,6 +355,8 @@
       "id": "e16",
       "fromNode": "indexing",
       "toNode": "vectorstores",
+      "fromSide": "left",
+      "toSide": "right",
       "pv": {
         "edgeType": "uses"
       }

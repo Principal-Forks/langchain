@@ -140,6 +140,8 @@
       "id": "e1",
       "fromNode": "langchain",
       "toNode": "langchain-core",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "dependency"
       }
@@ -148,6 +150,8 @@
       "id": "e2",
       "fromNode": "langchain-classic",
       "toNode": "langchain-core",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "dependency"
       }
@@ -156,6 +160,8 @@
       "id": "e3",
       "fromNode": "partner-openai",
       "toNode": "langchain-core",
+      "fromSide": "top",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "dependency"
       }
@@ -164,6 +170,8 @@
       "id": "e4",
       "fromNode": "partner-anthropic",
       "toNode": "langchain-core",
+      "fromSide": "top",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "dependency"
       }
@@ -172,6 +180,8 @@
       "id": "e5",
       "fromNode": "partner-ollama",
       "toNode": "langchain-core",
+      "fromSide": "top",
+      "toSide": "bottom",
       "pv": {
         "edgeType": "dependency"
       }
@@ -180,6 +190,8 @@
       "id": "e6",
       "fromNode": "text-splitters",
       "toNode": "langchain-core",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "dependency"
       }
@@ -188,6 +200,8 @@
       "id": "e7",
       "fromNode": "cli",
       "toNode": "langchain-core",
+      "fromSide": "bottom",
+      "toSide": "right",
       "pv": {
         "edgeType": "dependency"
       }
@@ -196,6 +210,8 @@
       "id": "e8",
       "fromNode": "standard-tests",
       "toNode": "partner-openai",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "tests"
       }
@@ -204,6 +220,8 @@
       "id": "e9",
       "fromNode": "standard-tests",
       "toNode": "partner-anthropic",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "tests"
       }
@@ -212,6 +230,8 @@
       "id": "e10",
       "fromNode": "standard-tests",
       "toNode": "partner-ollama",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "tests"
       }
@@ -220,6 +240,8 @@
       "id": "e11",
       "fromNode": "langchain",
       "toNode": "partner-openai",
+      "fromSide": "right",
+      "toSide": "top",
       "pv": {
         "edgeType": "integration"
       }
@@ -228,6 +250,8 @@
       "id": "e12",
       "fromNode": "langchain",
       "toNode": "partner-anthropic",
+      "fromSide": "right",
+      "toSide": "top",
       "pv": {
         "edgeType": "integration"
       }
